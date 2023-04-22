@@ -20,7 +20,7 @@ xhrRate.addEventListener('readystatechange', () => {
             output +='<div class="item__code">';
             output += ObjectRate[item].CharCode + '</div><div class="item__value">' + ObjectRate[item].Value;  
             output += '</div><div class="item__currency">руб.</div></div>';
-            insertElement.insertAdjacentHTML("afterend", output);            
+            insertElement.insertAdjacentHTML("beforeend", output);            
         }
     } 
 })
