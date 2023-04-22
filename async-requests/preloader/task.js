@@ -7,8 +7,14 @@ xhrRate.send();
 
 xhrRate.addEventListener('readystatechange', () => {
     if (xhrRate.readyState === xhrRate.DONE) {
-        //console.log(xhrRate.responseText);
-        document.getElementById("loader").classList.remove('loader_active');
-        
+        console.log(xhrRate.response);
+        document.getElementById("loader").classList.remove("loader_active");
+
+        const ObjectRate = JSON.parse(xhrRate.response)['response']['Valute'];
+        console.log('***---***---***' + ObjectRate + '***////***////');
+
+        for (const item in ObjectRate) {
+            console.log('PrinT ', ObjectRate[item].Value , ObjectRate[item].CharCode);
+        }
     } 
 })
