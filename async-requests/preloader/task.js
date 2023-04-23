@@ -22,5 +22,7 @@ xhrRate.addEventListener('readystatechange', () => {
             output += '</div><div class="item__currency">руб.</div></div>';
             insertElement.insertAdjacentHTML("beforeend", output);            
         }
-    } 
+    } else if (xhrRate.status != 200) {
+        document.querySelector('.item').innerHTML = "Что-то пошло не так. Обновите страницу.";
+    } // Можно предусмотреть больше исходов и описать реакции на них. Например на статус 404 - страница не найдена.
 })
