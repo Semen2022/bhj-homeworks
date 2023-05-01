@@ -35,6 +35,3 @@ if (storagedName) {
         xhrReg.send(formData);
     })
 }
-
-
-
